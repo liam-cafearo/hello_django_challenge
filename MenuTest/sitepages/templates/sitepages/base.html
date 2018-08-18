@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Django Challenge</title>
+    <style type="text/css">
+        /* As this is a challenge I took the css styling from stream one's navbar exercise */
+
+        body {
+            background-color: white;
+        }
+
+        nav ul li a {
+            display: block;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            background-color: #1D2026;
+        }
+
+        nav ul li {
+            font-size: 30px;
+            border-bottom: 1px solid #444;
+            padding: 10px 5px;
+            background-color: #1D2026;
+        }
+
+        nav ul li:hover {
+            background-color: #555;
+            transition: all .3s ease;
+        }
+
+        @media screen and (min-width: 665px) {
+            nav {
+                font-size: 0;
+                /* remove spacing issue */
+            }
+            nav ul li {
+                display: inline-block;
+                width: 120px;
+                font-size: 20px;
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<!-- As with the styling the below is from stream one's navbar exercise -->
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="about">About</a>
+            </li>
+            <li>
+                <a href="contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Hello Bootcampers, Welcome to the Hello Django Challenge!</h1>
+    {% block page_content %} {% endblock %}
+    <h2>The above content was rendered from a child template.</h2>
+</body>
+
+</html>
